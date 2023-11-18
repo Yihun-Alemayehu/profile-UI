@@ -36,17 +36,22 @@ class _ProfileOneState extends State<ProfileOne> {
                 children: [
                   Container(
                     height: 100,
-                    color: Colors.black,
+                    //color: Colors.black,
                   ),
                   Container(
                     height: 250,
-                    child: const Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundImage: AssetImage('assets/copy.jpg'),
-                          radius: 70,
-                        ),
-                      ],
+                    child: const Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text('2K Followers'),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/copy.jpg'),
+                            radius: 70,
+                          ),
+                          Text('156 Following'),
+                        ],
+                      ),
                     ),
                   ),
                 ],

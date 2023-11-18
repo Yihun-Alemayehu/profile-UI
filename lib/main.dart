@@ -36,7 +36,7 @@ class Home extends StatelessWidget {
           tileColor: Colors.grey[300],
           onTap: () {
             Navigator.of(context)
-                .pushNamedAndRemoveUntil('/ui-1', (route) => false);
+                .pushNamed('/ui-1');
           },
           title: const Text('Profile UI 1'),
         ),
@@ -44,8 +44,7 @@ class Home extends StatelessWidget {
           //contentPadding: const EdgeInsets.all(10),
           tileColor: Colors.grey[300],
           onTap: () {
-            Navigator.of(context)
-                .pushNamedAndRemoveUntil('/ui-2', (route) => false);
+            Navigator.of(context).pushNamed('/ui-2');
           },
           title: const Text('Profile UI 2'),
         ),

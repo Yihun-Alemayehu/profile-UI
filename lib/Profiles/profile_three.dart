@@ -19,30 +19,10 @@ class _ProfileThreeState extends State<ProfileThree> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Center(
-            child: Image.asset(
-              "images/profile-circle.png",
-              width: 200,
-            ),
-          ),
-          const Text.rich(
-            TextSpan(
-                text: "My",
-                style: TextStyle(
-                  color: Colors.orange,
-                  fontStyle: FontStyle.italic,
-                  fontSize: 23,
-                ),
-                children: [
-                  TextSpan(
-                    text: "Name",
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 23),
-                  )
-                ],
-            ),
-          ),
+              child: CircleAvatar(
+            radius: 90,
+            backgroundImage: AssetImage('assets/copy.jpg'),
+          )),
           const Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -55,7 +35,7 @@ class _ProfileThreeState extends State<ProfileThree> {
                     ),
                     children: [
                       TextSpan(
-                        text: "My Name ",
+                        text: "Yihun Alemayehu ",
                         style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
@@ -64,7 +44,7 @@ class _ProfileThreeState extends State<ProfileThree> {
                     ],
                   ),
                 ),
-                subtitle: Text("user name"),
+                subtitle: Text("User Name"),
                 leading: Icon(
                   Icons.person,
                   color: Colors.blue,
@@ -83,7 +63,7 @@ class _ProfileThreeState extends State<ProfileThree> {
                     ),
                     children: [
                       TextSpan(
-                        text: "0112345678910",
+                        text: "0982394038",
                         style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
@@ -92,7 +72,7 @@ class _ProfileThreeState extends State<ProfileThree> {
                     ],
                   ),
                 ),
-                subtitle: Text("user Phone"),
+                subtitle: Text("User Phone"),
                 leading: Icon(
                   Icons.phone,
                   color: Colors.blue,
@@ -111,7 +91,7 @@ class _ProfileThreeState extends State<ProfileThree> {
                     ),
                     children: [
                       TextSpan(
-                        text: "23",
+                        text: "20",
                         style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
@@ -120,7 +100,7 @@ class _ProfileThreeState extends State<ProfileThree> {
                     ],
                   ),
                 ),
-                subtitle: Text("user Age"),
+                subtitle: Text("User Age"),
                 leading: Icon(
                   Icons.person,
                   color: Colors.blue,
@@ -133,7 +113,7 @@ class _ProfileThreeState extends State<ProfileThree> {
               ListTile(
                 title: Text.rich(
                   TextSpan(
-                    text: "address : ",
+                    text: "Address : ",
                     style: TextStyle(
                       color: Colors.orange,
                     ),
