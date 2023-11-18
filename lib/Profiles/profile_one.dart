@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({super.key});
+class ProfileOne extends StatefulWidget {
+  const ProfileOne({super.key});
 
   @override
-  State<Profile> createState() => _ProfileState();
+  State<ProfileOne> createState() => _ProfileOneState();
 }
 
-class _ProfileState extends State<Profile> {
+class _ProfileOneState extends State<ProfileOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,12 +18,13 @@ class _ProfileState extends State<Profile> {
           children: [
             Container(
               height: 250,
-              
             ),
-            const SizedBox(height: 50,),
+            const SizedBox(
+              height: 50,
+            ),
             Expanded(
                 child: Container(
-                  height: 300,
+              height: 300,
               decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 121, 183, 233),
                 borderRadius: BorderRadius.only(
@@ -39,16 +40,15 @@ class _ProfileState extends State<Profile> {
                   ),
                   Container(
                     height: 250,
-                    child: const Column(                    
+                    child: const Column(
                       children: [
-                         CircleAvatar(
+                        CircleAvatar(
                           backgroundImage: AssetImage('assets/copy.jpg'),
                           radius: 70,
                         ),
                       ],
                     ),
                   ),
-                  
                 ],
               ),
             )),

@@ -1,106 +1,73 @@
 import 'package:flutter/material.dart';
-import 'package:newone/profile.dart';
+import 'package:newone/Profiles/profile_four.dart';
+import 'package:newone/Profiles/profile_three.dart';
+import 'package:newone/Profiles/profile_one.dart';
+import 'package:newone/Profiles/profile_two.dart';
 
-void main() => runApp(const MaterialApp(
+void main() => runApp(MaterialApp(
+      routes: {
+        '/ui-1': (context) => const ProfileOne(),
+        '/ui-2': (context) => const ProfileTwo(),
+        '/ui-3': (context) => const ProfileThree(),
+        '/ui-4': (context) => const ProfileFour(),
+      },
       debugShowCheckedModeBanner: false,
-      home: Profile(),
+      home: const Home(),
     ));
 
-
-class Ninja extends StatefulWidget {
-  const Ninja({super.key});
-
-  @override
-  State<Ninja> createState() => _NinjaState();
-}
-
-class _NinjaState extends State<Ninja> {
-
-  int ninjalevel = 1;
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Ninja ID Card'),
-        centerTitle: true,
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.white,
         elevation: 0,
+        title: const Text(
+          'Profile UI',
+          style: TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
       ),
-      body:  Padding(
-        padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: CircleAvatar(
-                backgroundImage: AssetImage('assets/image1.jpg'),
-                radius: 40,),
-            ),
-            Divider(
-              height: 40,
-            ),
-            Text(
-              'NAME',
-              style: TextStyle(
-                color: Colors.grey,
-                letterSpacing: 2,
-              ),
-            ),
-            SizedBox(height: 10,),
-            Text(
-              'Yihun Alemayehu',
-              style: TextStyle(
-                color: Colors.amber,
-                letterSpacing: 2,
-                fontSize: 20,
-              ),
-            ),
-            SizedBox(height: 30,),
-            Text(
-              'CURRENT NINJA LEVEL',
-              style: TextStyle(
-                color: Colors.grey,
-                letterSpacing: 2,
-              ),
-            ),
-            SizedBox(height: 10,),
-            Text(
-              '$ninjalevel',
-              style: TextStyle(
-                color: Colors.amber,
-                letterSpacing: 2,
-                fontSize: 20,
-              ),
-            ),
-            SizedBox(height: 30,),
-            Row(
-              children: [
-                Icon(Icons.mail,color: Colors.amber,),
-                Text('Yankure01@gmail.com',
-                style: TextStyle(
-                  color: Colors.amber,
-                ),
-                ),
-              ],
-            )
-          ],
-        ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.amber[900],
-          onPressed: (){
-            setState(() {
-              ninjalevel++;
-            });
+      body: Column(children: [
+        ListTile(
+          //contentPadding: const EdgeInsets.all(10),
+          tileColor: Colors.grey[300],
+          onTap: () {
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil('/ui-1', (route) => false);
           },
-          child: Text('+',
-          style: TextStyle(
-            fontSize: 40,
-          ),),
-          ),
+          title: const Text('Profile UI 1'),
+        ),
+        ListTile(
+          //contentPadding: const EdgeInsets.all(10),
+          tileColor: Colors.grey[300],
+          onTap: () {
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil('/ui-2', (route) => false);
+          },
+          title: const Text('Profile UI 2'),
+        ),
+        ListTile(
+          //contentPadding: const EdgeInsets.all(10),
+          tileColor: Colors.grey[300],
+          onTap: () {
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil('/ui-3', (route) => false);
+          },
+          title: const Text('Profile UI 3'),
+        ),
+        ListTile(
+          //contentPadding: const EdgeInsets.all(10),
+          tileColor: Colors.grey[300],
+          onTap: () {
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil('/ui-4', (route) => false);
+          },
+          title: const Text('Profile UI 4'),
+        ),
+      ]),
     );
   }
 }
-
