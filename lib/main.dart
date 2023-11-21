@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newone/Profiles/profile_five.dart';
 import 'package:newone/Profiles/profile_four.dart';
+import 'package:newone/Profiles/profile_six.dart';
 import 'package:newone/Profiles/profile_three.dart';
 import 'package:newone/Profiles/profile_one.dart';
 import 'package:newone/Profiles/profile_two.dart';
@@ -12,6 +13,7 @@ void main() => runApp(MaterialApp(
         '/ui-3': (context) => const ProfileThree(),
         '/ui-4': (context) => const ProfileFour(),
         '/ui-5': (context) => const ProfileFive(),
+        '/ui-6': (context) => const ProfileSix(),
       },
       debugShowCheckedModeBanner: false,
       home: const Home(),
@@ -86,6 +88,14 @@ class Home extends StatelessWidget {
           },
           title: const Text('Profile UI 5'),
           subtitle: const Text('User Interface - 5'),
+          trailing: const Icon(Icons.arrow_forward_ios_outlined),
+        ),
+        ListTile(
+          onTap: () {
+            Navigator.of(context).pushNamed('/ui-6');
+          },
+          title: const Text('Profile UI 6'),
+          subtitle: const Text('User Interface - 6'),
           trailing: const Icon(Icons.arrow_forward_ios_outlined),
         ),
       ]),
