@@ -11,45 +11,61 @@ class _ProfileFiveState extends State<ProfileFive> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-              child: Image(
-                  fit: BoxFit.cover,
-                  width: MediaQuery.of(context).size.width,
-                  image: AssetImage('assets/1.jpg'))),
-          SizedBox(
-            height: 20,
+        body: Column(children: [
+      Stack(alignment: Alignment.center, clipBehavior: Clip.none, children: [
+        Container(
+          child: Image.asset(
+            'assets/1.jpg',
+            width: double.infinity,
+            //height: 320,
+            fit: BoxFit.cover,
           ),
-          Expanded(
-            child: Column(
+        ),
+        Positioned(
+          top: 10,
+          child: Container(
+            height: 100,
+            decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 225, 12, 12),
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(60),
+                    topRight: Radius.circular(60))),
+            child: const Column(
               children: [
-                Stack(
-                  alignment: Alignment.topCenter,
+                Row(
                   children: [
-                    Positioned(
-                      top: -70,
-                      child: Container(
-                        //height: 100,
-                        width: MediaQuery.of(context).size.width,
-                        color: Colors.pink,
-                      ),
-                    ),
-                    Positioned(
-                      height: 150,
-                      top: -50,
-                      child: CircleAvatar(
-                        radius: 70,
-                        backgroundImage: AssetImage('assets/copy.jpg'),
-                      ),
-                    ),
+                    Text('2K Followers'),
+                    //Expanded(child: SizedBox()),
+                    Text('156 Following'),
                   ],
                 )
               ],
             ),
           ),
-        ],
-      ),
-    );
+        ),
+        // const Positioned(
+        //   top: 50,
+        //   //bottom: 30,
+        //   child: CircleAvatar(
+        //     radius: 70,
+        //     backgroundImage: AssetImage(
+        //       'assets/copy.jpg',
+        //     ),
+        //   ),
+        // ),
+      ]),
+      // Container(
+      //   child: Column(
+      //     children: [
+      //       Row(
+      //         children: [
+      //           Text('2K Followers'),
+      //           Text('156 Following'),
+      //         ],
+      //       )
+      //     ],
+      //   ),
+      // ),
+    ]));
   }
 }

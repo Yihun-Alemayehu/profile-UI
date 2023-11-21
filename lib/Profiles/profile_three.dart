@@ -15,7 +15,7 @@ class _ProfileThreeState extends State<ProfileThree> {
         title: const Text("Profile"),
         centerTitle: true,
       ),
-      body: Column(
+      body: const Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Center(
@@ -23,7 +23,7 @@ class _ProfileThreeState extends State<ProfileThree> {
             radius: 90,
             backgroundImage: AssetImage('assets/copy.jpg'),
           )),
-          const Column(
+          Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ListTile(
@@ -119,7 +119,7 @@ class _ProfileThreeState extends State<ProfileThree> {
                     ),
                     children: [
                       TextSpan(
-                        text: "Sqqara/Giza/Egypt",
+                        text: "Addis ababa, Ethiopia",
                         style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
