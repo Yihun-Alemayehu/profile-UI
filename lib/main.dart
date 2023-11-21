@@ -31,49 +31,62 @@ class Home extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
+        leading: const Icon(
+          Icons.menu,
+          color: Colors.black,
+        ),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Icon(
+              Icons.more_vert,
+              color: Colors.black,
+            ),
+          )
+        ],
       ),
       body: Column(children: [
         ListTile(
-          //contentPadding: const EdgeInsets.all(10),
-          tileColor: Colors.grey[300],
           onTap: () {
             Navigator.of(context).pushNamed('/ui-1');
           },
           title: const Text('Profile UI 1'),
+          subtitle: const Text('User Interface - 1'),
+          trailing: const Icon(Icons.arrow_forward_ios_outlined),
         ),
         ListTile(
-          //contentPadding: const EdgeInsets.all(10),
-          tileColor: Colors.grey[300],
           onTap: () {
             Navigator.of(context).pushNamed('/ui-2');
           },
           title: const Text('Profile UI 2'),
+          subtitle: const Text('User Interface - 2'),
+          trailing: const Icon(Icons.arrow_forward_ios_outlined),
         ),
         ListTile(
-          //contentPadding: const EdgeInsets.all(10),
-          tileColor: Colors.grey[300],
           onTap: () {
             Navigator.of(context)
                 .pushNamedAndRemoveUntil('/ui-3', (route) => false);
           },
           title: const Text('Profile UI 3'),
+          subtitle: const Text('User Interface - 3'),
+          trailing: const Icon(Icons.arrow_forward_ios_outlined),
         ),
         ListTile(
-          //contentPadding: const EdgeInsets.all(10),
-          tileColor: Colors.grey[300],
           onTap: () {
             Navigator.of(context)
                 .pushNamedAndRemoveUntil('/ui-4', (route) => false);
           },
           title: const Text('Profile UI 4'),
+          subtitle: const Text('User Interface - 4'),
+          trailing: const Icon(Icons.arrow_forward_ios_outlined),
         ),
         ListTile(
-          //contentPadding: const EdgeInsets.all(10),
-          tileColor: Colors.grey[300],
           onTap: () {
             Navigator.of(context).pushNamed('/ui-5');
           },
           title: const Text('Profile UI 5'),
+          subtitle: const Text('User Interface - 5'),
+          trailing: const Icon(Icons.arrow_forward_ios_outlined),
         ),
       ]),
     );
